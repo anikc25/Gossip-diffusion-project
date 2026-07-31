@@ -52,4 +52,5 @@ pip install numpy pandas scipy statsmodels linearmodels scikit-learn xgboost
 
 ## Author
 
-Anik Shamoitree
+Anik Chakraborty 
+Shamoitree Pal
