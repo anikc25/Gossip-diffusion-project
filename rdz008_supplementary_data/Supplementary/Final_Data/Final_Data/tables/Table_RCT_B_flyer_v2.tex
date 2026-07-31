@@ -1,0 +1,21 @@
+\begin{tabular}{lccccc} \hline
+ & (1) & (2) & (3) & (4) & (5) \\
+ & RF & OLS & IV 1: First Stage & IV 2: First Stage & IV: Second Stage \\
+VARIABLES & $\frac{\mbox{Calls Received}}{\mbox{Seeds}}$ & $\frac{\mbox{Calls Received}}{\mbox{Seeds}}$ & At least 1 Gossip & At least 1 Elder & $\frac{\mbox{Calls Received}}{\mbox{Seeds}}$ \\ \hline
+ &  &  &  &  &  \\
+Gossip Treatment & 0.591 &  & 0.636 & 0.331 &  \\
+ & (0.841) &  & (0.0660) & (0.0821) &  \\
+Elder Treatment & -0.646 &  & 0.220 & 0.846 &  \\
+ & (0.738) &  & (0.0807) & (0.0502) &  \\
+At least 1 Gossip &  & 1.359 &  &  & 1.535 \\
+ &  & (0.644) &  &  & (1.179) \\
+At least 1 Elder &  & -0.162 &  &  & -1.164 \\
+ &  & (0.691) &  &  & (0.748) \\
+Constant &  &  &  & 0.109 &  \\
+ &  &  &  & (0.160) &  \\
+ &  &  &  &  &  \\
+Observations & 213 & 213 & 213 & 213 & 213 \\
+Control Group Mean & 2.452 & 1.595 & 0.400 & 0.180 & 2.048 \\
+Gossip Treatment=Elder Treatment (pval.) & 0.0400 &  & 0 & 0 &  \\
+ At least 1 Gossip=At least 1 Elder (pval.) &  & 0.190 &  &  & 0.0400 \\ \hline
+\end{tabular}

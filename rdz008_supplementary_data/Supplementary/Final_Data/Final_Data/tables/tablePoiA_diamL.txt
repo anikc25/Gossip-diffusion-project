@@ -1,0 +1,15 @@
+		(1)	(2)	(3)	(4)	(5)
+VARIABLES	LABELS	Loan	Loan	Loan	Loan	Loan
+						
+DC7_norm_union	Diffusion Centrality (12 dimensions) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \	0.625				
+		(0.075)				
+degree_norm_union	Degree Centrality (12 dimensions) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \		0.490			
+			(0.067)			
+eig_norm_union	Eigenvector Centrality (12 dimensions) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \			0.614		
+				(0.084)		
+leader	Leader				1.013	
+					(0.263)	
+gps_sd	Geographic Centrality					-0.113
+						(0.083)
+						
+Observations		6,466	6,466	6,466	6,466	6,466

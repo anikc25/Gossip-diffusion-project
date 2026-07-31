@@ -1,0 +1,24 @@
+readme
+arun chandrasekhar
+december, 2018
+
+
+structure
+./data - location of data
+	karnataka_cell_rct.dta - karnataka cell phone rct data
+	haryana_rct_Table3.csv - haryana data for table 3	haryana_rct_Table2_villagelevel.dta - haryana data for summary stats	haryana_rct_Table2_seedslevel.dta - haryana data for summary stats	haryana_rct_Figure3.csv - haryana data for figure 3
+	karnataka_gossip_processed.dta - karnataka networks gossip data
+	nomination_data.dta - karnataka networks gossip nominated characteristics data
+	nominating_features.dta - karnataka networks gossip nominating features data
+	all_hh_data - covariates for karnataka data
+
+./do - location of files for regression analysis
+	analysis_cell_RCT.do - analysis file for karnataka cell phone rct
+	analysis_haryana_rct_Table3.R - analysis file for haryana immunization rct table
+	analysis_haryana_rct_Figure3.R - analysis file for haryana immunization rct figure
+	analysis_haryana_rct_Table2 - analysis file for haryana immunization summary table
+	analysis_gossip.do - analysis file for karnataka networks gossip
+
+./tables - location of all output
+
+./tables/Figures_Tables_viewer - tex file to compile and view all results

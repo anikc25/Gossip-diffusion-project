@@ -1,0 +1,16 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	Event	Event	Event	Event	Event	Event
+							
+DC7_norm_union	Diffusion Centrality (12 dimensions) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \	0.303	0.161	0.269	0.285	0.173	0.285
+		(0.091)	(0.087)	(0.061)	(0.060)	(0.107)	(0.060)
+degree_norm_union	Degree Centrality (12 dimensions) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \	-0.020				-0.013	
+		(0.066)				(0.068)	
+eig_norm_union	Eigenvector Centrality (12 dimensions) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \		0.138			0.137	
+			(0.095)			(0.095)	
+leader	Leader			0.294			
+				(0.174)			
+gps_sd	Geographic Centrality				-0.024		
+					(0.040)		
+							
+Observations		6,466	6,466	6,466	6,466	6,466	6,466
+Post-LASSO							\checkmark

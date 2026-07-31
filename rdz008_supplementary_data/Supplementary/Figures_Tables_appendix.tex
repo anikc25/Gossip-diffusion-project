@@ -1,0 +1,225 @@
+
+
+\section{Extension of Microfinance Village (wave 2) Network results}\label{sec:phase1_ext}
+This section extends the descriptive analysis from the Microfinance Village (wave 2) network data on 33 villages. %We present results using the loan question for gossip nomination.
+We repeat all of our analyses with OLS specifications instead of Poisson specifications. Additionally, we include a Post-LASSO estimation which conducts a LASSO to select which variables best explain our outcome of interest (number of nominations) and then does a post-estimation to recover consistent parameter estimates.
+
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{C.\arabic{table}}
+
+\begin{table}[!h]
+\centering
+\caption{Factors predicting nominations}\label{tab:predict1_OLS}
+\scalebox{0.9}{\begin{threeparttable}
+\input{appendixtables/tableOLSA_diamE.tex}
+\input{appendixtables/tableOLSA_diamL.tex}
+\begin{tablenotes}Notes: This table uses data from the microfinance village (wave 2) dataset. It reports estimates of OLS regressions where the outcome variable is the expected number of nominations under the event question. Panel A presents results for the event question, and Panel B presents results for the loan question. %Results are robust to including caste fixed effects and village fixed effects, available upon request.
+Degree centrality, eigenvector centrality, and diffusion centrality, $DC\left(1/\E[\lambda_1]\g,\E[Diam(\g(n,p))]\right)$, are normalized by their standard deviations. Standard errors (clustered at the village level) are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+
+\clearpage
+
+
+\begin{table}[!h]
+\centering
+\scalebox{0.9}{\begin{threeparttable}
+\caption{Factors predicting nominations}\label{tab:predict_biv_OLS}
+\input{appendixtables/tableOLSC_diamE_lasso.tex}
+\input{appendixtables/tableOLSC_diamL_lasso.tex}
+\begin{tablenotes}
+Notes: This table uses data from the microfinance village (wave 2) dataset. It reports estimates of OLS regressions where the outcome variable is the expected number of nominations. Panel A presents results for the event question, and Panel B presents results for the loan question. %Results are robust to including caste fixed effects and village fixed effects, available upon request.
+Degree centrality, eigenvector centrality, and diffusion centrality, $DC\left(1/\E[\lambda_1]\g,\E[Diam(\g(n,p))]\right)$, are normalized by their standard deviations. Column (6) uses a post-LASSO procedure where in the first stage LASSO is implemented to select regressors and in the second stage the regression in question is run on those regressors. Omitted terms indicate they were not selected in the first stage. Standard errors (clustered at the village level) are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+\clearpage
+
+
+
+%\begin{table}[!h]
+%\centering
+%\caption{Factors predicting nominations}\label{tab:predict1_L}
+%\scalebox{0.9}{\begin{threeparttable}
+%\input{../Phase1_Output_Oct2016/tablePoiA_diamL.tex}
+%\input{../Phase1_Output_Oct2016/tableOLSA_diamL.tex}
+%\begin{tablenotes}
+%Notes: This table uses data from the microfinance village (wave 2) dataset. Panel A reports estimates of Poisson regressions where the outcome variable is the expected number of nominations under the loan question. Panel B reports the same using OLS. %Results are robust to including caste fixed effects and village fixed effects, available upon request.
+%Degree centrality, eigenvector centrality and diffusion centrality, $DC\left(\g; 1/\E[\lambda_1],\E[Diam(\g(n,p))]\right)$, are normalized their standard deviations. Standard errors (clustered at the village level) are reported in parentheses.
+%\end{tablenotes}
+%\end{threeparttable}}
+%\end{table}
+%
+%\clearpage
+
+
+%\begin{table}[!h]
+%\centering
+%\scalebox{0.9}{\begin{threeparttable}
+%\caption{Factors predicting nominations}\label{tab:predict_biv_L_lasso}
+%\input{../Phase1_Output_Oct2016/tablePoiC_diamL_lasso.tex}
+%\input{../Phase1_Output_Oct2016/tableOLSC_diamL_lasso.tex}
+%\begin{tablenotes}
+%Notes: This table uses data from the microfinance village (wave 2) dataset. Panel A reports estimates of Poisson regressions where the outcome variable is the expected number of nominations under the loan question. Panel B reports the same using OLS. %Results are robust to including caste fixed effects and village fixed effects, available upon request.
+%Degree centrality, eigenvector centrality and diffusion centrality, $DC\left(\g; 1/\E[\lambda_1],\E[Diam(\g(n,p))]\right)$, are normalized their standard deviations. Column (6) uses a post-LASSO procedure where in the first stage LASSO is implemented to select regressors and in the second stage the regression in question is run on those regressors. Omitted terms indicate they were not selected in the first stage. Standard errors (clustered at the village level) are reported in parentheses.
+%\end{tablenotes}
+%\end{threeparttable}}
+%\end{table}
+
+
+\section{Extension of experiment analysis}\label{sec:expt_ext}
+This section extends the analysis of the experiment results to using four instruments.
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{D.\arabic{table}}
+
+\clearpage
+\begin{table}[!h]
+\centering
+\caption{Calls received by treatment} \label{tab:mainExpt_2_2}
+\scalebox{0.8}{\begin{threeparttable}
+\input{appendixtables/Table_RCT_A_2_2.tex}
+\input{appendixtables/Table_RCT_B_2_2.tex}
+\begin{tablenotes}Notes: This table uses data from the cell phone RCT dataset. Panel A uses the number of calls received as the outcome variable. Panel B normalizes the number of calls received by the number of seeds, 3 or 5, which is randomly assigned. For both panels, Column (1) shows the reduced form results of regressing number of calls received on dummies for gossip treatment and elder treatment. Column (2) regresses number of calls received on the dummies for if at least 1 gossip was hit and for if at least 1 elder was hit in the village. Columns (3) and (4) show the first stages of the instrumental variable regressions, where the dummies for ``at least 1 gossip'' and ``at least 1 elder'' are regressed on the exogenous variables: gossip treatment dummy, 5 gossip seeds dummy, elder treatment dummy, 5 elder seeds dummy. Column (5) shows the second stage of the IV; it regresses the number of calls received on the dummies for if at least 1 gossip was hit and if at least 1 elder was hit, both instrumented by treatment status of the village (gossip treatment or not, elder treatment or not) and seed number dummies for the village (5 gossip seeds or not, 5 elder seeds or not). All columns control for number of gossips, number of elders and number of seeds. For columns (1), (3), and (4)  the control group mean is calculated as the mean expectation of the outcome variable when the treatment is ``random''. For columns (2) and (5), the control group mean is calculated as the mean expectation of the outcome variable when no gossips or elders are reached. The control group mean for the second stage IV is calculated using IV estimates. Robust standard errors are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+
+\clearpage
+
+
+\section{Experiment Analysis with Broadcast Village}\label{sec:broadcast}
+This section repeats our main experimental analyses but includes the broadcast village where the poster was made by one of the seeds.
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{E.\arabic{table}}
+
+
+\begin{table}[!h]
+\centering
+\caption{Calls received by treatment}\label{tab:mainExpt_flyer}
+\scalebox{0.6}{\begin{threeparttable}
+\input{appendixtables/Table_RCT_A_flyer_v2.tex}
+\input{appendixtables/Table_RCT_B_flyer_v2.tex}
+\begin{tablenotes}Notes: This table uses data from the cell phone RCT dataset. Panel A uses the number of calls received as the outcome variable. Panel B normalizes the number of calls received by the number of seeds, 3 or 5, which is randomly assigned. For both panels, Column (1) shows the reduced form results of regressing number of calls received on dummies for gossip treatment and elder treatment. Column (2) regresses number of calls received on the dummies for if at least 1 gossip was hit and for if at least 1 elder was hit in the village. Columns (3) and (4) show the first stages of the instrumental variable regressions, where the dummies for ``at least 1 gossip'' and ``at least 1 elder'' are regressed on the exogenous variables: gossip treatment dummy and elder treatment dummy. Column (5) shows the second stage of the IV; it regresses the number of calls received on the dummies for if at least 1 gossip was hit and if at least 1 elder was hit, both instrumented by treatment status of the village (gossip treatment or not, elder treatment or not). All columns control for number of gossips, number of elders, and number of seeds. For columns (1), (3), and (4)  the control group mean is calculated as the mean expectation of the outcome variable when the treatment is ``random''. For columns (2) and (5), the control group mean is calculated as the mean expectation of the outcome variable when no gossips or elders are reached. The control group mean for the second stage IV is calculated using IV estimates. Robust standard errors are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+
+\clearpage
+
+
+\begin{table}[!h]
+\centering
+\caption{Calls received by seed type}\label{tab:seedType_OLS_flyer}
+\scalebox{0.65}{\begin{threeparttable}
+\input{appendixtables/Table_SeedDC_OLS_flyer_v2.tex}
+%\input{../FollowUpWorkshop/tables_oct2016/Table_SeedDC_OLS_B_flyer.tex}
+\begin{tablenotes}Notes: This table uses data from the cell phone RCT and follow-up network dataset. The table presents OLS regressions of number of calls received (and number of calls received normalized by the number of seeds, 3 or 5, which is randomly assigned) on characteristics of the set of seeds. High $DC$ refers to a seed being above the mean by one standard deviation of the centrality distribution. All columns control for total number of gossips, number of elders, and number of seeds. For columns (1), (2), (4), and (5), the control group mean is calculated as the mean expectation of the outcome variable when no gossips or elders are reached. For columns (3) and (6), the control group mean is calculated as the mean expectation of the outcome variable when no high $DC$ seeds are reached. Robust standard errors are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+%
+\clearpage
+
+
+\section{When People Don't Nominate Anyone}\label{sec:dontknow}
+
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{F.\arabic{table}}
+
+Here we look at whether the odds that someone refuses to nominate anyone can be explained by our model.
+
+ Suppose that people get disutility from reporting incorrect guesses to a surveyor.\footnote{See \cite{alatas2012network} for such an example of where this happened in practice when individuals were more likely to report that they don't know rather than offer a guess when trying to rank other villagers in terms of wealth.}
+
+ Our theoretical results on network gossip converging to diffusion centrality are asymptotic results - with any finite number of iterations of gossip passing,
+ an individual's ranking of others' centralities can be noisy.
+
+ In particular, after $T$ periods, $i$'s perceptions are not quite at their expectations:
+\[
+\widehat{NG}_{ji} = NG_{ji} + \varepsilon_{ji}.
+\]
+where $\varepsilon_{ji}$ will depend on $T$, $\w$, and $i$ and $j$'s positions in the network - eventually vanishing (in proportion to $NG_{ji}$) when $T$ becomes large.
+
+One way that $i$ can assess how accurate their ranking is, would be looking at how extreme $\widehat{NG}_{ji}$ is compared to the average number of times that $i$ has heard about other people. If this is more extreme, then it is less likely to reverse.
+Then if $i$' 99th percentile $\widehat{NG}_{ji}$ is more extreme in terms of numbers of times heard compared to the average, then $i$ can distinguish this tail better from the rest of the distribution, even if there is noise. That is, the ability to distinguish $NG_{ji}^{99\%}$ from $\bar{NG}_i$ should increase in $NG_{ji}^{99\%}$ holding $\varepsilon$ fixed.
+
+From this perspective, our model predicts that the larger the extreme quantiles of $i$'s network gossip distribution are, controlling for the average (note that is just proportional to $DC_i$), then $i$ should be more likely to nominate and less likely to answer that he does not know. This comes from the fact that he should be better able to distinguish between alternatives.
+
+For this estimation, as in the rest of the paper we work with $T$ equal to the diameter of the network and $q$ equal to the inverse of the first eigenvalue.
+
+
+\begin{table}[!h]
+\centering
+\caption{Does the tail of network gossip drive nominations?}\label{tab:dontknow}
+\scalebox{0.8}{\begin{threeparttable}
+\input{appendixtables/table_dontknow.tex}
+\begin{tablenotes}Notes: This table uses data from the microfinance village (wave 2) dataset. The data consists of a individual level observations and the outcome is whether the individual nominated anyone in response to the lottery gossip question.The key regressor is the value of the person who is at the 99th (or 9th) percentile from the distribution network gossip for $i$. Columns 2 and 4 include village fixed effects, estimated by a conditional logit.  Standard errors (clustered at the village level) are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+The results in Table \ref{tab:dontknow} are consistent with this story. A one standard deviation increase in the 99th percentile of network gossip of $j$ as perceived by $i$ corresponds to, holding fixed the average network gossip of others as perceived by $i$, a 1.3 percent increase in the probability of $i$ nominating anyone. Across specifications we have $p$ values of $0.11,0.08,0.18,0.6$, respectively, across columns.
+
+
+\
+
+Next we look at the demographics of those who choose to nominate versus those who choose not to nominate in Table \ref{tab:dontknow_demo}. We look at a number of demographics: caste, occupation, household amenities, respondent gender, and geography. We also include social status variables such as leadership (as defined from our previous work based on the lender's designations) and the number of nominations the individual's household received under loan and event questions. Finally we include the diffusion centrality of the respondent's household.
+
+\begin{table}[!h]
+\centering
+\caption{Demographics of those who choose to nominate}\label{tab:dontknow_demo}
+\scalebox{0.8}{\begin{threeparttable}
+\input{appendixtables/table_drive_nomination.tex}
+\begin{tablenotes}Notes: This table uses data from the microfinance village (wave 2) dataset. The data consists of a individual level observations and the outcome is whether the individual nominated anyone in response to the lottery gossip question. Standard errors (clustered at the village level) are reported in parentheses and all specifications include village fixed effects.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+
+Table \ref{tab:dontknow_demo} presents the result. Being more diffusion central is positively and significantly associated with the respondent being willing to nominate someone. This is consistent with our model. Meanwhile, almost none of the other demographics or social status variables matter. In fact, there is no other statistically significant variable for loan nominations. For event nominations, the number  of times the respondent's household was nominated under the event question matters as does whether the respondent owns their own house. Beyond that, no other variable matters.
+
+\clearpage
+
+
+\section{Characteristics of Gossips, Elders, and Random}\label{sec:gossip_elder_demo}
+
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{G.\arabic{table}}
+
+
+\begin{table}[!h]
+\centering
+\caption{Characteristics of gossip, elder, and random households}\label{tab:gossip_elder_demo}
+\scalebox{0.8}{\begin{threeparttable}
+\input{appendixtables/Table_GossipvsElder.tex}
+\begin{tablenotes}Notes: This table uses data from the Karnataka cell phone RCT dataset. The data consists of a individual level observations and the outcome is whether the individual nominated (as a gossip or elder, omitted is random) has the characteristic noted. Column 1 is whether the individual is SCST, column 2  is whether the primary occupation of the household is farm labor, column 3 is whether the primary income comes from land ownership, column 4 is whether the household is electrified, column 5 is whether electrification is from private purchase, column 6 is whether they own their house, column 7 is the number of rooms in the house. Standard errors (clustered at the village level) are reported in parentheses.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+\clearpage
+
+\section{Karnataka Cellphone Experiment Payment Schedule}\label{sec:cellphone_payment}
+
+
+
+In the Karnataka cell phone RCT, every individual who called in and therefore was eligible for a prize was able to do the following. They simply rolled two dice. The outcome of the roll -- some number between 2 and 12 -- corresponded to a prize. This was independent across all participants. Every roll had some cash prize and the cell phone was worth approximately Rs. 3000. Note that if every participant rolled a 12, then every participant would win a cell phone.
+
+\begin{figure}[!h]
+\begin{center}
+	\includegraphics[trim = 2.5mm 0mm 2.5mm 2.5mm, clip = true, scale = 0.6]{appendixfigures/ExperimentalPayouts.png}
+\end{center}
+		\caption{Prizes as a function of the roll of two dice in the Karnataka cell phone RCT.\label{fig:experiment_payout}}
+\end{figure}
+
+

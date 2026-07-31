@@ -1,0 +1,15 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	Calls Received	Calls Received	Calls Received	$\frac{\mbox{Calls Received}}{\mbox{Seeds}}$	$\frac{\mbox{Calls Received}}{\mbox{Seeds}}$	$\frac{\mbox{Calls Received}}{\mbox{Seeds}}$
+							
+atleast_gossip_1	At least 1 Gossip	12.89	13.02		3.751	3.871	
+		(7.225)	(8.157)		(2.282)	(2.584)	
+atleast_elder_1	At least 1 Elder	-3.371	-3.321		-1.012	-0.962	
+		(5.155)	(4.946)		(1.547)	(1.456)	
+dcAtleast1	At least 1 High \textit{DC} Seed		-0.485	2.262		-0.478	0.342
+			(4.803)	(3.834)		(1.515)	(1.189)
+							
+Observations		69	69	69	69	69	69
+Control Group Mean		4.840	4.840	8.828	1.101	1.101	2.433
+At least 1 Gossip=At least 1 Elder (pval.)		0.150	0.170		0.190	0.200	
+At least 1 Gossip=At least 1 High \textit{DC} Seed (pval.)			0.270			0.270	
+At least 1 Elder=At least 1 High \textit{DC} Seed (pval.)			0.580			0.710	
